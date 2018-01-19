@@ -6,13 +6,13 @@ import java.util.Date;
  * Created by Yipu on 18/01/2018.
  */
 
-public class moodSad extends Mood {
+public class MoodSad extends Mood {
 
-    public moodSad(String mood){
+    public MoodSad(String mood){
         super(mood);
     }
 
-    public moodSad(String mood, Date date){
+    public MoodSad(String mood, Date date){
         super(mood, date);
     }
 
