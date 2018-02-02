@@ -1,3 +1,15 @@
+/*	LonelyTwitterActivity
+ *
+ *	Version 1.0
+ *
+ * 	Feb 01, 2018
+ *
+ * Copyright (c) 2018 Team 24, CMPUT301. University of Alberta - All Rights Reserved.
+ * You may use distribute or modify this code under terms and conditions of Code of Student Behavior at
+ * University of Alberta.
+ * You can find a copy of the lincense in this project. Otherwise, please contact yipu1@ualberta.ca
+ */
+
 package ca.ualberta.cs.lonelytwitter;
 
 import java.io.BufferedReader;
@@ -25,6 +37,15 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
+/**
+ * 	Allows user to post tweets and clear records.
+ *
+ * 	@author Yipu
+ *
+ * 	@version 1.0
+ *
+ */
 
 public class LonelyTwitterActivity extends Activity {
 
@@ -92,6 +113,13 @@ public class LonelyTwitterActivity extends Activity {
 
 	}
 
+	/**
+	 * 	Reads tweet records from file
+	 *
+	 * 	@throws FileNotFoundException	It throws when inputfile is not found
+	 *	@throws IOException				It throws when encountering an IO error
+	 *
+	 */
 	private void loadFromFile() {
 
 		try {
@@ -112,7 +140,13 @@ public class LonelyTwitterActivity extends Activity {
 			throw new RuntimeException();
 		}
 	}
-	
+
+	/**
+	 * Saves tweet records to file
+	 *
+	 * 	@throws FileNotFoundException	It throws when inputfile is not found
+	 *	@throws IOException				It throws when encountering an IO error
+	 */
 	private void saveInFile() {
 		try {
 			FileOutputStream fos = openFileOutput(FILENAME,
