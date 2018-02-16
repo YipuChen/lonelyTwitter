@@ -16,4 +16,9 @@ public class ImportantTweet extends Tweet implements Tweetable {
     public String getMessage() {
         return "IMPORTANT!! " + this.message;
     }
+
+
+    public int compareTo(Tweet tweet) {
+        return getDate().compareTo(tweet.getDate());
+    }
 }

@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Created by romansky on 1/14/16.
  */
-public abstract class Tweet {
+public abstract class Tweet implements Comparable<Tweet> {
     protected String message;
     private Date date;
 
@@ -35,6 +35,7 @@ public abstract class Tweet {
     }
 
     abstract public boolean isImportant();
+
 
     @Override
     public String toString(){
